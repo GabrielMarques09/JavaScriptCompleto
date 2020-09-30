@@ -1,0 +1,32 @@
+.mostrarUsuarios {
+    width: 250px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.5rem;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: blueviolet;
+    color: #FFF;
+    text-align: center;
+    margin: 0 auto;
+}
+
+table, th, td {
+    border: 1px solid #FFF;
+    padding: 4px;
+    
+}
+
+.disable {
+    opacity: 45%;
+}

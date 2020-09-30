@@ -8,6 +8,11 @@ nome.toLocaleLowerCase();
 var btn = document.querySelector('.btn');
 btn.addEventListener
 btn.appendChild
+btn.id
+btn.innerHTML
+btn.outerHTML
 
 // busque na web um objeto (método) capaz de interagir com o clipboard, 
 // clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+    </head>
+    <body>
+        <style>
+            label {
+                display: block;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                margin-bottom: .5rem;
+                margin-top: 1rem;
+            }
+            form{
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            input[type="text"], textarea {
+                width: 100%;
+                box-sizing: border-box;
+                padding: .5rem;
+                border: 2px solid #000;
+                font-size: 1rem;
+                margin-bottom: .5rem;
+            }
+            textarea {
+                height: 150px;
+            }
+
+            .texto {
+                display: flex;
+                justify-content: center;
+            }
+
+            .invalido {
+                border-color:red;
+            }
+
+            .valido {
+                border-color: greenyellow;
+            }
+        </style>
+        <form name="contato" id="contato">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Marcio Araujo" required>
+            <span class="erro"></span>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="marcio@email.com" required>
+            <span class="erro"></span>
+            <label for="nome">Mensagem</label>
+            <textarea name="mensagem" id="mensagem"></textarea>
+            <select name="cores" id="cores">
+                <option value="white">Branco</option>
+                <option value="red">Vermelho</option>
+                <option value="green">Verde</option>
+            </select>
+
+            <input type="color">
+        </form>
+        <span class="texto"></span>
+
+        <script>
+            const contato = document.querySelector('#contato');
+            const texto = document.querySelector('.texto');
+            function handleKeyUp(event){
+                const target = event.target;
+                if(!target.checkValidity()) {
+                    target.classList.remove('valido');
+                    target.classList.add('invalido');
+                    target.nextElementSibling.innerText = target.validationMessage
+                } else {
+                    target.classList.remove('invalido');
+                    target.classList.add('valido')
+                    target.nextElementSibling.innerText = ''
+                }
+                console.log(target.checkValidity())
+                texto.innerText = event.target.value
+            }
+
+            function handleSelect(event) {
+
+                document.body.style.backgroundColor = event.target.value;
+            }
+
+            //contato.addEventListener('change', handleKeyUp)
+            contato.addEventListener('change', handleSelect)
+            
+        </script>
+    </body>
+</html>
