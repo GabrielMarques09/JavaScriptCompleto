@@ -28,6 +28,6 @@ const substituiCPFS = (cpfsElements) => {
 substituiCPFS(cpfsList)
 
 
-// console.log(limparCPF('048.955.145-95'))
-// console.log(contruirCPF('04895514595'))
+// console.log(limparCPF('111.111.111-11'))
+// console.log(contruirCPF('11111111111'))
 // console.log(formatarCPF(resultado))
