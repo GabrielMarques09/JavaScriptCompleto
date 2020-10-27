@@ -8,7 +8,7 @@ import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
-import initAnimacaoScroll from './modules/scroll-animacao.js';
+import ScrollAnima from './modules/scroll-anima.js';
 
 const scorllSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scorllSuave.init();
@@ -25,7 +25,9 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-initAnimacaoScroll();
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
+
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();
